@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImgWeb</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        html {
+            background-color: rgb(7, 5, 109);
+            color: white;
+        }
+        #div1 {
+            /*background-color: rgba(3, 0, 160, 0.507);*/
+            background-image: url('https://www.highreshdwallpapers.com/wp-content/uploads/2013/12/wallpaper-4.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+            font-family: 'Press Start 2P', cursive;
+            padding: 2em;
+            margin-top: -11px;
+            margin-left: -10px;
+            margin-right: -10px;
+            top: 0px;
+            text-align: center;
+        }
+        #p1{
+            font-size: 30px;
+            margin-top: 0%;
+            padding-bottom: 30px;
+        }
+        
+        #h {
+            font-size: 8em;
+            margin: 0px;
+            padding-bottom: 5px;
+            padding-top: 30px;
+        }
+
+        div.d {
+            position: sticky;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.575);
+            font-family: 'Raleway', sans-serif;
+            font-size: 23px;
+            margin-top: 10px;
+            margin-bottom: 0%;
+            padding: 20px 100px 20px 100px;
+            text-align: center;
+        }
+
+        .div2{
+            font-family: 'Raleway', sans-serif;
+            background-color: rgba(0, 0, 0, 0.418);
+            margin: 30px 22px 30px 22px;
+            padding: 50px;
+            text-align: center;
+        }
+
+        #outbox{
+            background-image: url('https://free4kwallpapers.com/uploads/originals/2019/11/16/night-city-buildings-wallpaper.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            /*background-attachment: fixed;*/
+            margin-bottom: -11px;
+            margin-left: -10px;
+            margin-right: -10px;
+            padding: 50px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        #inbox h1, a{
+            /*mix-blend-mode: multiply;*/
+            font-family: 'Raleway', sans-serif;
+            display: block;
+            background-color: rgba(255, 255, 255, 0.562);
+            text-align: center;
+            color: rgba(0, 0, 0, 0.699);
+            margin: 0px;
+            padding-bottom: 30px;
+            padding-top: 30px;
+        }
+
+        #inh1{
+            padding-top: 60px;
+            padding-bottom: 20px;
+            margin: 0%;
+            font-size: 50px;
+        }
+        #ina1{
+            margin-bottom: 0px;
+            font-size: 30px;
+        }
+        #ina2{
+            margin-top: -21.5px;
+            margin-bottom: 0px;
+            font-size: 30px;
+        }
+        #ina3{
+            margin-top: -21.6px;
+            margin-bottom: 0px;
+            font-size: 30px;
+        }
+        #ina1:hover, #ina2:hover, #ina3:hover{
+            background-color: rgb(255,255,255);
+            color: black;
+        }
+        #ina1:active, #ina2:active, #ina3:active{
+            background-color:unset;
+            color: white;
+        }
+        img{
+            height: 30px;
+            width: 30px;
+        }
+        input{
+            cursor: pointer;
+        }
+        .sub{
+            font-size: 20px;
+            font-family: 'Raleway', sans-serif;
+        }
+        #imgc{
+            padding-left: 110px;
+            margin-bottom: 20px;
+            font-weight:900;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">
+        <h1 id="h">ImgWeb</h1>
+        <p id="p1">To edit your image in your style</p>
+    <!-- </div> -->
+    <div class="d">
+        This is a very user friendly image editing website, all you need to do is select & upload your image then
+        choose how you want to edit it and download your result image. As simple as that !!
+    </div>
+    </div>
+    <form action="filter_selection" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="div2">
+        <h1>Upload your image to continue</h1>
+        <br>
+        <input type="file" name="image" accept="image/*" class="sub" id="imgc" required>
+        <br>
+        <input type="submit" value="Upload Image" class="sub">
+        </div>
+    </form>
+    <div id="outbox">
+        <div id="inbox">
+            <h1 id="inh1">Made with love by</h1>
+            <a href="https://www.linkedin.com/in/rajdip-roy-8a41aa192/" id="ina1"><img src="https://webstockreview.net/images/linkedin-icon-png-7.png" alt=""> Rajdip Roy</a><br>
+            <a href="https://www.linkedin.com/in/surjo-seth-14a177191/" id="ina2"><img src="https://webstockreview.net/images/linkedin-icon-png-7.png" alt=""> Surjo Seth</a><br>
+            <a href="https://www.linkedin.com/in/manideep-bhattacharyya-9ab78b20b/" id="ina3"><img src="https://webstockreview.net/images/linkedin-icon-png-7.png" alt=""> Manideep Bhattacharyya</a>
+        </div>
+    </div>
+</body>
+
+</html>
