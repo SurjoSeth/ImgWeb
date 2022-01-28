@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-r4(t2x($txhs99*em-lld5$m$w729+s5^qk2u@o46p@_4qw=na
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','imgweb.herokuapp.com']
 
 MEDIA_URL='/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
